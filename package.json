@@ -1,0 +1,28 @@
+{
+  "name": "site_for_trampolines",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "webserver": "gulp webserver"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dandel10n/site_for_trampolines.git"
+  },
+  "author": "Mariya Radchuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dandel10n/site_for_trampolines/issues"
+  },
+  "homepage": "",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0"
+  }
+}
