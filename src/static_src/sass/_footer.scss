@@ -1,0 +1,43 @@
+.contacts {
+  min-height: 89px;
+  background-color: #f2f2f2;
+  text-align: center;
+  font-size: 14px;
+}
+
+.contacts_container {
+  width: 53%;
+  margin: auto;
+}
+
+.contact_number {
+  margin-top: 40px;
+  margin-left: 27px;
+  height: 21px;
+  line-height: 21px;
+}
+
+.number {
+  float: left;
+}
+
+.phone_icon {
+  width: 22px;
+  height: 21px;
+  float: left;
+}
+
+.velcom {
+  background: url(../img/sprite.png) 0 -20px no-repeat;
+  margin-right: 10px;
+}
+
+.mts {
+  background: url(../img/sprite.png) -45px -20px no-repeat;
+  margin-right: 7px;
+}
+
+.phone {
+  background: url(../img/sprite.png) -22px -20px no-repeat;
+  margin-right: 5px;
+}
