@@ -1,0 +1,49 @@
+.banner {
+  height: 768px;
+}
+
+.banner_img,
+.banner_content{
+  height: 768px;
+  margin: 0 -15px;
+
+}
+
+.banner_img {
+  background: url(../img/banner_image.png) 50% 0 no-repeat;
+}
+
+.banner_content {
+  background-color: #0071a8;
+}
+
+.banner_logo {
+  background: url(../img/sprite.png) 0 -41px no-repeat;
+  width: 79px;
+  height: 92px;
+  margin: auto;
+  margin-bottom: 70px;
+}
+
+.banner_content-block {
+  width: 550px;
+  margin: auto;
+  padding-top: 129px;
+  color: #fff;
+  text-align: center;
+}
+
+.banner_text__title {
+  font-size: 50px;
+  line-height: 1.1;
+  margin-bottom: 35px;
+}
+
+.banner_text__block {
+  font-size: 20px;
+  line-height: 1.75;
+}
+
+
+
+
