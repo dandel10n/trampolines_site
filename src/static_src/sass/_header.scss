@@ -1,33 +1,29 @@
 header {
-  min-height: 777px;
-  background: url(../img/header_image.png) 50% 0 no-repeat;
-  padding-left: 38px;
+  min-height: 480px;
+  background: url(../img/header_image.png) 50% 50% no-repeat;
+  color: #fff;
+  text-align: left;
+
+  h1 {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: 30px;
+    line-height: 1.3;
+  }
 }
 
 .logo {
+  display: block;
   width: 209px;
   height: 79px;
-  background: url(../img/logo.png) 0 0 no-repeat;
-  margin-top: 38px;
+  margin-top: 20px;
+  margin-bottom: 80px;
 }
 
-.header_text {
-  width: 450px;
-  margin-top: 150px;
-  font-size: 45px;
-  color: #fff;
-  text-align: left;
-  line-height: 1.3;
-
-  span {
-    display: block;
-    margin-left: -7px;
-    font-size: 110px;
-    font-weight: 600;
-    margin-bottom: 40px;
-    line-height: 0.709;
-  }
-}
 
 .header_button-container {
   display: block;
@@ -36,7 +32,7 @@ header {
   width: 60px;
   height: 60px;
   margin: auto;
-  margin-top: 200px;
+  margin-top: 40px;
   padding-top: 23px;
 }
 
@@ -45,5 +41,30 @@ header {
   width: 22px;
   height: 14px;
   margin: auto;
+}
+
+@media screen and (min-width: 700px) {
+  header {
+    min-height: 777px;
+    padding-left: 38px;
+
+    h1 {
+      font-size: 110px;
+    }
+
+    h2 {
+      font-size: 45px;
+      line-height: 1.3;
+    }
+  }
+
+  .logo {
+    margin-top: 38px;
+    margin-bottom: 110px;
+  }
+
+  .header_button-container {
+    margin-top: 191px;
+  }
 }
 
