@@ -3,7 +3,7 @@
 }
 
 .banner_img {
-  display: none;
+  background: url(../img/banner_image.png) 50% 0 no-repeat;
 }
 
 .banner_content {
@@ -71,11 +71,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .banner_img {
-    display: block;
-    background: url(../img/banner_image.png) 50% 0 no-repeat;
-  }
+@media screen and (min-width: 992px) {
 
   .banner_content-block {
     width: 450px;
