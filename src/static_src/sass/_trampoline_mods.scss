@@ -16,6 +16,14 @@
   width: 100%;
 }
 
+.mods-carousel {
+  display: none;
+
+  &_active {
+    display: block;
+  }
+}
+
 .mods-options {
   display: flex;
   flex-flow: row nowrap;

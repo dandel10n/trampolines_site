@@ -17,16 +17,19 @@ $(document).ready(function() {
         $(".choose-diameter_options").removeClass("choose-diameter_options__active");
     });
 
-    $('#mods-carousel').on('slide.bs.carousel', function (e) {
+    $('#mods-carousel-mod1, #mods-carousel-mod2').on('slide.bs.carousel', function (e) {
+        var carousel = $(this);
         var targetElement = $(e.relatedTarget);
-        var allMobileOptions = $('.choose-diameter_options .size-options_mobile_block');
+        var allMobileOptions = carousel.find('.choose-diameter_options .size-options_mobile_block');
         var targetMobileOption = $(allMobileOptions.get(targetElement.index()));
 
         allMobileOptions.removeClass('active');
         targetMobileOption.addClass('active');
-    });
+    })
 
-    $("#header_button").click(function() {
+    $("#header_button").click(function(event) {
+        event.preventDefault();
+
         $('html, body').animate({
             scrollTop: $("#scrollTo").offset().top
         }, 1000);
