@@ -1,6 +1,6 @@
 header {
   min-height: 480px;
-  background: url(../img/header_image.png) 50% 50% no-repeat;
+  background: url(../img/header_image_mobile.png) 50% 50% no-repeat;
   color: #fff;
   text-align: left;
 
@@ -48,6 +48,7 @@ header {
   header {
     min-height: 777px;
     padding-left: 38px;
+    background: url(../img/header_image.png) 50% 50% no-repeat;
 
     h1 {
       font-size: 110px;
