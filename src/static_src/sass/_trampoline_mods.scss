@@ -2,8 +2,9 @@
   position: relative;
   min-height: 768px;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .sidebar {
@@ -12,24 +13,29 @@
   top: 0;
   left: 0;
   z-index: 1;
+  width: 100%;
 }
 
 .mods-options {
-  margin-left: -312px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: -165px;
   transition: 0.5s;
-}
 
-.mods-options__active {
-  margin-left: 0;
+  &__active {
+    margin-top: 0;
+  }
 }
 
 .mod-to-choose {
   position: relative;
   display: block;
-  width: 372px;
-  height: 384px;
+  width: 50%;
+  height: 213px;
   color: #fff;
-  background-color: #50ac00;
+  background-color: #007ebf;
 
   &:link,
   &:hover,
@@ -40,78 +46,50 @@
   }
 
   &:active {
-    background-color: #3e8600;
+    background-color: #0070aa;
   }
 }
 
 .mod-to-choose_info {
-  width: 312px;
-  height: 384px;
-}
-
-.mod_header {
-  font-size: 30px;
-  color: #444242;
-  text-align: center;
-  margin-top: 60px;
-  margin-bottom: 40px;
+  width: 100%;
+  height: 165px;
 }
 
 .img_block {
   position: relative;
-  width: 204px;
-  height: 301px;
+  width: 100px;
+  height: 127px;
   margin: auto;
-  padding-top: 45px;
-}
+  padding-top: 40px;
 
-.guarantee {
-  position: absolute;
-  top: 25px;
-  right: -30px;
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  background-color: #ffcd07;
-  box-shadow: 0 3px 3px 0 rgba(#000, 0.13);
-  font-size: 11px;
-  color: #2e2503;
-  line-height: 1.2;
-  text-align: center;
-  padding-top: 9px;
+  .desktop_img {
+    display: none;
+  }
 
-  span {
-    font-size: 18px;
-    font-weight: 700;
+  .mobile_img {
+    display: block;
   }
 }
 
+.guarantee {
+  display: none;
+}
+
 .mod-to-choose_button {
-  width: 384px;
-  height: 60px;
-  line-height: 60px;
-  margin-top: -30px;
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  margin-top: -48px;
   position: absolute;
-  top: 50%;
-  left: 151px;
-  font-size: 23px;
+  top: 100%;
+  left: 0;
+  font-size: 18px;
   font-weight: 600;
   text-align: center;
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  transform: rotate(-90deg);
 }
 
 .advantage {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.438;
-  text-align: center;
-  width: 263px;
-  margin: auto;
-  padding-top: 20px;
+  display: none;
 }
 
 .full-info {
@@ -121,6 +99,13 @@
   transition:  0.5s;
 }
 
+.mod_header {
+  font-size: 30px;
+  color: #444242;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
 
 .the-best-sale {
   font-size: 17px;
@@ -138,8 +123,8 @@
 
 .description {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  flex-flow: column nowrap;
+  justify-content: center;
   align-items: center;
 
   .description_text {
@@ -244,12 +229,6 @@
   }
 }
 
-.hamburger-menu {
-  li {
-    float: left;
-  }
-}
-
 .size-options {
     width: 865px;
     margin: auto;
@@ -264,10 +243,6 @@
     position: static;
     margin: 0;
   }
-}
-
-.full-info__active .size-options {
-  width: 100%;
 }
 
 .size-options_block {
@@ -328,7 +303,173 @@
   line-height: 1.278;
 }
 
+
+.hamburger-menu {
+  position: relative;
+  width: 278px;
+  margin: auto;
+
+  .choose-diameter {
+    border: 1px solid #d4d4d4;
+    border-radius: 2px;
+    width: 278px;
+    height: 38px;
+    font-size: 15px;
+    color: #777;
+    line-height: 38px;
+    text-align: left;
+    padding-left: 10px;
+
+    span {
+      float: right;
+      display: inline-block;
+      margin-top: 15px;
+      margin-right: 10px;
+      height: 8px;
+      width: 16px;
+      background: url(../img/sprite.png) -49px 0 no-repeat;
+    }
+  }
+
+  .choose-diameter_options {
+    display: none;
+
+    &__active {
+      display: block;
+      position: absolute;
+      top: 37px;
+      left: 0;
+      z-index: 2;
+      padding-left: 10px;
+      background-color: #fff;
+      width: 100%;
+      border: 1px solid #d4d4d4;
+      border-radius: 2px;
+    }
+  }
+
+  .size-options_mobile_block {
+    padding: 15px 0;
+
+    &.active {
+      color: #0070aa;
+    }
+  }
+}
+
+@media screen and (min-width: 701px) {
+  .trampoline_mods {
+    min-height: 768px;
+    flex-flow: row nowrap;
+  }
+
+  .sidebar {
+    width: auto;
+  }
+
+  .mods-options {
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 0;
+    margin-left: -312px;
+  }
+
+  .mods-options__active {
+    margin-left: 0;
+  }
+
+  .mod-to-choose {
+    width: 372px;
+    height: 384px;
+    background-color: #50ac00;
+
+    &:active {
+      background-color: #3e8600;
+    }
+  }
+
+  .mod-to-choose_info {
+    width: 312px;
+    height: 384px;
+  }
+
+  .img_block {
+    width: 204px;
+    height: 301px;
+    padding-top: 45px;
+
+    .desktop_img {
+      display: block;
+    }
+
+    .mobile_img {
+      display: none;
+    }
+  }
+
+  .guarantee {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: -30px;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: #ffcd07;
+    box-shadow: 0 3px 3px 0 rgba(#000, 0.13);
+    font-size: 11px;
+    color: #2e2503;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 9px;
+
+    span {
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+
+  .mod-to-choose_button {
+    width: 384px;
+    height: 60px;
+    line-height: 60px;
+    margin-top: -30px;
+    top: 50%;
+    left: 151px;
+    font-size: 23px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+
+  .advantage {
+    display: block;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.438;
+    text-align: center;
+    width: 263px;
+    margin: auto;
+    padding-top: 20px;
+  }
+
+  .full-info {
+    width: 100%;
+    margin-left: 60px;
+    padding-left: 130px;
+    transition:  0.5s;
+  }
+}
+
 @media screen and (min-width: 1025px) {
+  .description {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
   .hamburger-menu {
     display: none;
   }
@@ -340,11 +481,14 @@
   }
 }
 
-
 @media screen and (min-width: 1300px) {
   .full-info__active {
     margin-left: 372px;
     padding-left: 60px;
     transition: 0.5s;
+
+    .size-options {
+      width: 100%;
+    }
   }
 }
