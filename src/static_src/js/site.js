@@ -1,12 +1,26 @@
 $(document).ready(function() {
-    $(".mod-to-choose_button").click(function(event){
+
+    $(".mod-to-choose").click(function(event) {
         event.preventDefault();
-    });
+
+        var currentElement = $(this);
+        var modOptionsContainer = currentElement.parent(".mods-options");
+        var allOptionLinks = modOptionsContainer.find(".mod-to-choose");
+        var fullInfoContainer = $(".full-info");
+        var allModCarousels = $(".mods-carousel");
 
 
-    $(".mod-to-choose_button").click(function() {
-        $(".mods-options").toggleClass("mods-options__active");
-        $(".full-info").toggleClass("full-info__active");
+        if (modOptionsContainer.hasClass("mods-options__active")) {
+            allModCarousels.removeClass("mods-carousel_active");
+            $(currentElement.data("target")).addClass("mods-carousel_active");
+
+            allOptionLinks.removeClass("mod-to-choose__active");
+            currentElement.addClass("mod-to-choose__active");
+        }
+
+        modOptionsContainer.toggleClass("mods-options__active");
+        fullInfoContainer.toggleClass("full-info__active");
+
     });
 
     $(".choose-diameter").click(function() {
@@ -25,7 +39,7 @@ $(document).ready(function() {
 
         allMobileOptions.removeClass('active');
         targetMobileOption.addClass('active');
-    })
+    });
 
     $("#header_button").click(function(event) {
         event.preventDefault();
