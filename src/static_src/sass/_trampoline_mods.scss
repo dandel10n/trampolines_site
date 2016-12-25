@@ -45,7 +45,7 @@
     color: #fff;
   }
 
-  &:active {
+  &__active {
     background-color: #0070aa;
   }
 }
@@ -94,23 +94,17 @@
 
 .full-info {
   width: 100%;
-  margin-left: 60px;
-  padding-left: 130px;
-  transition:  0.5s;
+  margin-top: 75px;
 }
 
 .mod_header {
-  font-size: 30px;
-  color: #444242;
-  text-align: center;
-  margin-top: 60px;
-  margin-bottom: 40px;
+  display: none;
 }
 
 .the-best-sale {
-  font-size: 17px;
+  font-size: 14px;
   color: #4d4d4d;
-  padding-bottom: 42px;
+  padding-bottom: 20px;
 
   span {
     display: inline-block;
@@ -126,15 +120,17 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  padding: 0 20px;
 
   .description_text {
     h4 {
-      font-size: 26px;
+      font-size: 20px;
       font-weight: 600;
-      line-height: 1.346;
+      line-height: 1.5;
       text-align: left;
       color: #0071a8;
-      padding-bottom: 23px;
+      padding-top: 20px;
+      padding-bottom: 30px;
     }
 
     ul {
@@ -164,22 +160,46 @@
   }
 }
 
+.description_image {
+  display: none;
+}
+
+.description_image__mobile {
+  width: 90%;
+  height: 90%;
+  max-width: 500px;
+  max-height: 500px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .order {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   border-top: 1px solid #e6e6e6;
-  padding-top: 35px;
-  width: 110%;
+  padding: 15px 0;
+  width: 100%;
 }
 
 .price {
-  font-size: 30px;
   font-weight: 600;
+  text-align: right;
+
+  .old_value {
+    font-size: 18px;
+  }
+
+  .new_value {
+    font-size: 16px;
+  }
 
   span {
-    font-size: 18px;
+    font-size: 13px;
     font-weight: 400;
   }
 }
@@ -187,15 +207,16 @@
 .order_button {
   position: relative;
   display: block;
-  width: 169px;
-  height: 50px;
-  line-height: 50px;
-  font-size: 18px;
+  width: 144px;
+  height: 45px;
+  line-height: 45px;
+  font-size: 15px;
   font-weight: 600;
-  padding-left: 30px;
+  padding-left: 25px;
   color: #000;
   border-radius: 2px;
   background-color: #ffcd07;
+  transition: 0.5s;
 
   &:link,
   &:hover,
@@ -207,14 +228,13 @@
 
   &:hover {
     background-color: #ff9f07;
-    transition: 0.5s;
   }
 
   .order_arrow {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     background-color: #ff9f07;
-    padding-top: 16.5px;
+    padding-top: 14px;
     position: absolute;
     top: 0;
     right: 0;
@@ -350,6 +370,7 @@
 
   .size-options_mobile_block {
     padding: 15px 0;
+    cursor: pointer;
 
     &.active {
       color: #0070aa;
@@ -357,7 +378,289 @@
   }
 }
 
-@media screen and (min-width: 701px) {
+@media screen and (min-width: 900px) {
+
+  .full-info {
+    width: 100%;
+    margin-top: 0;
+    padding-left: 20px;
+    transition:  0.5s;
+  }
+
+  .mod_header {
+    display: block;
+    font-size: 30px;
+    color: #444242;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+
+  .the-best-sale {
+    font-size: 17px;
+    color: #4d4d4d;
+    padding-bottom: 42px;
+
+    span {
+      display: inline-block;
+      width: 15px;
+      height: 20px;
+      background: url(../img/sprite.png) -34px 0 no-repeat;
+      margin-right: 10px;
+    }
+  }
+
+  .description {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .description_text {
+      h4 {
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 1.346;
+        text-align: left;
+        color: #0071a8;
+        padding-top: 0;
+        padding-bottom: 23px;
+      }
+
+      ul {
+        font-size: 14px;
+        line-height: 25px;
+        color: #4d4d4d;
+        padding-bottom: 25px;
+
+        li {
+          padding-bottom: 10px;
+          padding-left: 25px;
+          position: relative;
+        }
+      }
+    }
+  }
+
+  .order {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e6e6e6;
+    padding-top: 35px;
+    width: 110%;
+  }
+
+  .price {
+    .old_value {
+      font-size: 30px;
+    }
+
+    .new_value {
+      font-size: 20px;
+    }
+
+    span {
+      font-size: 18px;
+    }
+  }
+
+  .order_button {
+    position: relative;
+    display: block;
+    width: 169px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 30px;
+    color: #000;
+    border-radius: 2px;
+    background-color: #ffcd07;
+    transition: 0.5s;
+
+    &:link,
+    &:hover,
+    &:visited,
+    &:visited:hover {
+      text-decoration: none;
+      color: #000;
+    }
+
+    &:hover {
+      background-color: #ff9f07;
+    }
+
+    .order_arrow {
+      width: 50px;
+      height: 50px;
+      background-color: #ff9f07;
+      padding-top: 16.5px;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      span {
+        display: block;
+        width: 10px;
+        height: 17px;
+        background:  url(../img/sprite.png) -24px 0 no-repeat;
+        margin: auto;
+      }
+    }
+  }
+
+  .description_image {
+    display: block;
+    width: 494px;
+    height: 494px;
+  }
+
+  .description_image__mobile {
+    display: none;
+  }
+
+  .size-options {
+    width: 865px;
+    margin: auto;
+    transition: 0.5s;
+
+    .carousel-indicators {
+      width: 865px;
+      min-height: 100px;
+      padding-bottom: 29px;
+      border-top: 4px solid #e6e6e6;
+      position: static;
+      margin: 0;
+    }
+  }
+
+  .size-options_block {
+    float: left;
+    width: 14.2%;
+    text-align: center;
+
+    &:link,
+    &:hover,
+    &:visited,
+    &:visited:hover {
+      text-decoration: none;
+    }
+
+    &.active {
+      width: 14.2%;
+      height: auto;
+    }
+
+    &.active .size-options_text {
+      color: #0071a8;
+      font-size: 25px;
+    }
+
+    &.active .size-options_dot {
+      background-color: #0071a8;
+      box-shadow: 0 2px 2px 0 rgba(#000, 0.2);
+      margin-top: -12px;
+      width: 23px;
+      height: 23px;
+    }
+
+    &__inactive .size-options_text {
+      color: #e6e6e6;
+    }
+
+    &__inactive .size-options_text,
+    &__inactive .size-options_dot {
+      cursor: default;
+    }
+  }
+
+  .size-options_dot {
+    display: block;
+    background-color: #e6e6e6;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: -7px;
+  }
+
+  .size-options_text {
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #4d4d4d;
+    line-height: 1.278;
+  }
+
+  .hamburger-menu {
+    position: relative;
+    width: 278px;
+    margin: auto;
+
+    .choose-diameter {
+      border: 1px solid #d4d4d4;
+      border-radius: 2px;
+      width: 278px;
+      height: 38px;
+      font-size: 15px;
+      color: #777;
+      line-height: 38px;
+      text-align: left;
+      padding-left: 10px;
+
+      span {
+        float: right;
+        display: inline-block;
+        margin-top: 15px;
+        margin-right: 10px;
+        height: 8px;
+        width: 16px;
+        background: url(../img/sprite.png) -49px 0 no-repeat;
+      }
+    }
+
+    .choose-diameter_options {
+      display: none;
+
+      &__active {
+        display: block;
+        position: absolute;
+        top: 37px;
+        left: 0;
+        z-index: 2;
+        padding-left: 10px;
+        background-color: #fff;
+        width: 100%;
+        border: 1px solid #d4d4d4;
+        border-radius: 2px;
+      }
+    }
+
+    .size-options_mobile_block {
+      padding: 15px 0;
+
+      &.active {
+        color: #0070aa;
+      }
+    }
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  .size-options {
+    .carousel-indicators {
+      display: block;
+    }
+  }
+
+}
+
+@media screen and (min-width: 1025px) {
+
   .trampoline_mods {
     min-height: 768px;
     flex-flow: row nowrap;
@@ -384,7 +687,7 @@
     height: 384px;
     background-color: #50ac00;
 
-    &:active {
+    &__active {
       background-color: #3e8600;
     }
   }
@@ -456,32 +759,24 @@
     padding-top: 20px;
   }
 
-  .full-info {
-    width: 100%;
-    margin-left: 60px;
-    padding-left: 130px;
-    transition:  0.5s;
-  }
-}
-
-@media screen and (min-width: 1025px) {
   .description {
     flex-flow: row nowrap;
     justify-content: space-between;
   }
 
-  .hamburger-menu {
-    display: none;
-  }
-
-  .size-options {
-    .carousel-indicators {
-      display: block;
-    }
+  .full-info {
+    margin-left: 20px;
+    padding-left: 100px;
   }
 }
 
 @media screen and (min-width: 1300px) {
+
+  .full-info {
+    margin-left: 60px;
+    padding-left: 130px;
+  }
+
   .full-info__active {
     margin-left: 372px;
     padding-left: 60px;

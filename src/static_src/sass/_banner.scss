@@ -1,13 +1,5 @@
-.banner {
-  min-height: 480px;
-}
-
 .banner_img {
   background: url(../img/banner_image.png) 50% 0 no-repeat;
-}
-
-.banner_content {
-  min-height: 480px;
 }
 
 .banner_content {
@@ -43,13 +35,9 @@
 
 @media screen and (min-width: 700px) {
 
-  .banner {
-    min-height: 768px;
-  }
-
   .banner_img,
   .banner_content{
-    min-height: 768px;
+    min-height: 500px;
   }
 
   .banner_logo {
@@ -76,6 +64,16 @@
   .banner_content-block {
     width: 450px;
   }
+
+  .banner {
+    min-height: 768px;
+  }
+
+  .banner_img,
+  .banner_content{
+    min-height: 768px;
+  }
+
 }
 
 @media screen and (min-width: 1200px) {
